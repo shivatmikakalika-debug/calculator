@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="display">
+      <div id="expr"></div>
+      <div id="result">0</div>
+    </div>
+
+    <div class="angle-toggle">
+      <label><input type="radio" name="angle" value="deg" checked> Degrees</label>
+      <label><input type="radio" name="angle" value="rad"> Radians</label>
+    </div>
+
+    <div class="grid grid-5">
+      <button onclick="inp('Math.sin(')">sin(</button>
+      <button onclick="inp('Math.cos(')">cos(</button>
+      <button onclick="inp('Math.tan(')">tan(</button>
+      <button onclick="inp('Math.asin(')">asin(</button>
+      <button onclick="inp('Math.acos(')">acos(</button>
+      <button onclick="inp('Math.atan(')">atan(</button>
+      <button onclick="inp('Math.log(')">ln(</button>
+      <button onclick="inp('Math.log10(')">log(</button>
+      <button onclick="inp('Math.sqrt(')">√(</button>
+      <button onclick="inp('Math.PI')">π</button>
+    </div>
+
+    <div class="grid grid-4">
+      <button onclick="inp('Math.pow(')">xʸ</button>
+      <button onclick="inp('Math.E')">e</button>
+      <button onclick="inp('Math.abs(')">|x|</button>
+      <button class="red" onclick="clearAll()">AC</button>
+
+      <button onclick="inp('7')">7</button>
+      <button onclick="inp('8')">8</button>
+      <button onclick="inp('9')">9</button>
+      <button class="op" onclick="inp('/')">/</button>
+
+      <button onclick="inp('4')">4</button>
+      <button onclick="inp('5')">5</button>
+      <button onclick="inp('6')">6</button>
+      <button class="op" onclick="inp('*')">*</button>
+
+      <button onclick="inp('1')">1</button>
+      <button onclick="inp('2')">2</button>
+      <button onclick="inp('3')">3</button>
+      <button class="op" onclick="inp('-')">-</button>
+
+      <button onclick="inp('0')">0</button>
+      <button onclick="inp('.')">.</button>
+      <button onclick="inp('()')">()</button>
+      <button class="op" onclick="inp('+')">+</button>
+
+      <button class="red" onclick="backspace()">⌫</button>
+      <button onclick="inp(')')">)</button>
+      <button class="eq span2" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
